@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoItem from './TodoItem';
+import './style.css'
 
 class TodoList extends React.Component {
 
@@ -52,7 +53,7 @@ class TodoList extends React.Component {
       <div>
         <div>
           <input value={this.state.inputValue} onChange={this.handleInputChange}/>
-          <button onClick={this.handleBtnClick}>Add</button>
+          <button className='btn' onClick={this.handleBtnClick}>Add</button>
         </div>
         <ul>{this.getTodoItems()}</ul>
       </div>
