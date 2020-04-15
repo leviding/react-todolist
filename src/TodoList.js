@@ -9,19 +9,16 @@ class TodoList extends React.Component {
       list: [],
       inputValue: ''
     }
-
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleBtnClick = this.handleBtnClick.bind(this);
   }
 
-  handleBtnClick() {
+  handleBtnClick = () => {
     this.setState({
       list: [...this.state.list, this.state.inputValue],
       inputValue: ''
     })
   }
 
-  handleInputChange(e) {
+  handleInputChange = (e) => {
     this.setState({
       inputValue: e.target.value
     })
